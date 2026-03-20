@@ -4,12 +4,15 @@ package org.example;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
      static void main(String[] args) {
-        String name = "World";
+        String name;
 
         if (args.length > 0) {
-            name = args[0];
+            name = String.join(", ", args);
+        } else {
+            name = "World";
         }
-        System.out.println("Hello, " + name  + "!");
-        }
+
+        System.out.println("Hello, " + name + "!");
     }
+}
 
