@@ -9,12 +9,8 @@ public class Main {
          if (args.length == 0) {
              greeting = "Hello, World!";
          } else {
-             StringBuilder nameBuilder = new StringBuilder();
-             for (String name : args) {
-                 nameBuilder.append(name).append(", ");
-             }
-             nameBuilder.substring(0, nameBuilder.length() - 2);
-             greeting = "Hello, " + nameBuilder.substring(0, nameBuilder.length() - 2) + "!";
+             String names = String.join(", ", args);
+             greeting = "Hello, " + names + "!";
          }
 
          System.out.println(greeting);
