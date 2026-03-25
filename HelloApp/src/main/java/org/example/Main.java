@@ -9,14 +9,12 @@ public class Main {
          if (args.length == 0) {
              greeting = "Hello, World!";
          } else {
-             StringBuilder names = new StringBuilder();
+             StringBuilder nameBuilder = new StringBuilder();
              for (String name : args) {
-                 if (!names.isEmpty()) {
-                     names.append(", ");
-                 }
-                 names.append(name);
+                 nameBuilder.append(name).append(", ");
              }
-             greeting = "Hello, " + names.toString() + "!";
+             nameBuilder.substring(0, nameBuilder.length() - 2);
+             greeting = "Hello, " + nameBuilder.substring(0, nameBuilder.length() - 2) + "!";
          }
 
          System.out.println(greeting);
